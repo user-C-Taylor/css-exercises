@@ -1,0 +1,20 @@
+
+/* Grouping class selectors clicky-one and clicky-two
+   here to assign shared property/value combinations. */
+.clicky-one, .clicky-two {
+    font-size: 28px;
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+.clicky-one {
+    /* White in HEX code. */
+    color: #ffffff;
+
+    /* Black in HEX code.*/
+    background-color: #000000;
+}
+
+.clicky-two {
+    /* Yellow in HEX code. */
+    background-color: #ffff00;
+}
