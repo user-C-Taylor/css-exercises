@@ -4,6 +4,7 @@ div {
     color: white;
     background-color: red;
     font-size: 32px;
+    /*increment of 700 font-weight represents "bold"*/
     font-weight: 700;
     text-align: center;
 }
