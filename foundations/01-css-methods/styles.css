@@ -1,0 +1,9 @@
+/* This is a CSS comment. External CSS, yay! */
+
+div {
+    color: white;
+    background-color: red;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
