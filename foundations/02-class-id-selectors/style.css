@@ -1,0 +1,28 @@
+
+.p1 {
+    /* HEX color is #RRGGBB with values from 00 to FF. 
+       Appending 00 through FF selects for alpha value (transparency).
+       FF is ff in HEX.*/
+    background-color: #ff000050;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+    font-size: 18px
+}
+
+/* Chaining p2 behind p1 like this will apply this font size
+   for elements with both class p1 and class p2. */
+.p1.p2 {
+    font-size: 24px;
+}
+
+#blue-id {
+    color: #0000ff;
+    font-size: 36px;
+}
+
+/* Note the alpha value. 
+   Also, font weight 700 is bold. */
+#green-id {
+    background-color: #00ff0080;
+    font-size: 24px;
+    font-weight: 700;
+}
