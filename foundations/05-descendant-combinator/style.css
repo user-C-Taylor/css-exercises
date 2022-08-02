@@ -1,0 +1,10 @@
+
+/* Descendant combinator only applies for a child element, here 
+   tagged .text, that has an ancestor element, here tagged .container.
+   */
+.container .text {
+    color: #ff0000;
+    background-color: #ffff00;
+    font-size: 20px;
+    text-align: center;
+}
