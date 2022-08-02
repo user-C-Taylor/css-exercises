@@ -1,0 +1,14 @@
+
+/* Chaining means selected property/value combinations only affect
+   elements (in this case) that have both classes; avatar, and
+   proportioned. */
+.avatar.proportioned {
+    width: 300px;
+    /* The auto height retains the image's original proportions. */
+    height: auto;
+}
+
+.avatar.distorted {
+    width: 200px;
+    height: 400px;
+}
