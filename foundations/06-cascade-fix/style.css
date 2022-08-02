@@ -2,29 +2,11 @@ body {
   font-family: Arial, Helvetica, sans-serif
 }
 
-/* Set .child, .para, and .small-para to bold. 
-   Use specificity of #confirm-button over .confirm to allow this
-   declaration block to precede the .button declaration block
-   --this in turn allows .child, .para, and .small-para to
-   be added for a chain of property/value combinations as detailed. */
-#confirm-button, .child, .para, .small-para {
-  background: green;
-  color: white;
-  font-weight: bold;
-}
-
-/* Set .child, .para, and .small-para background to white. 
-   Note the confirm button has a font-size assigned here via the
-   .button class. */
-.button, .child, .para, .small-para {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-/* Follow with specific settings for .child, .para, and .small-para. */
-
+/* Yay!! I can extra bold now, that is; change the styles to do so. */
 .para, .small-para {
   color: hsl(0, 0%, 0%);
+  /* Extra bold is 800 font-weight. */
+  font-weight: 800;
 }
 
 .para {
@@ -35,14 +17,38 @@ body {
   font-size: 14px;
 }
 
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
 
+/* Positioning .confirm after .button sets background to .confirm 
+   value. Another solution would have been to chain it. */
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+/* I feel the chaining here is unnecessary and therefore remove it. 
+div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+}
+   After reviewing the TOP solution, this additionally solves the 
+   conflict between div.text and .child. But the TOP solution requires 
+   a higher level of cascade understanding so was understandably chosen.
+*/
 .text {
   color: rgb(0, 0, 0);
   font-size: 22px;
 }
 
+/* Positioning .child after .text allows .child to articulate in the 
+   element with both classes .text and .child. */
 .child {
   color: rgb(0, 0, 0);
   font-size: 14px;
+  font-weight: 800;
 }
-
