@@ -92,7 +92,12 @@ button.cancel {
   font-weight: 700;
   /* A top margin of 1px is unneeded if if the parent class aligns 
      items center */
+  /* Although adding a top margin of 1px matches the TOP solution, the 
+     directions say to both vertically align the header and the close button AND to align the close button in the top right of the modal.
+     This requires deviating from the TOP solution and eliminating the 
+     1px margin.
   margin-top: 1px;
+  */
 }
 
 .lower-right {
