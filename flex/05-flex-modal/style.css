@@ -64,3 +64,39 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+
+
+/* Solution. */
+
+.modal {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+}
+
+.icon {
+  flex: none;
+}
+
+/* Aligning child items center moves them down 1px, here. */
+.upper-right {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.header {
+  font-size:18px;
+  font-weight: 700;
+  /* A top margin of 1px is unneeded if if the parent class aligns 
+     items center */
+  margin-top: 1px;
+}
+
+.lower-right {
+  margin-top: 16px;
+}
+
+
