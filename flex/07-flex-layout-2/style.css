@@ -26,3 +26,82 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+
+
+/* Solution. */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+/* TOP solution  uses neither a child .header-content nor a child div 
+   for the display: flex centered footer text. Apparently text without 
+   a container is treated as a child by display: flex. */
+.header-content {
+  font-size: 32px;
+  font-weight: 900;
+  padding-left: 16px;
+}
+
+.body-content {
+  display: flex;
+  /* TOP solution doesn't bother affirming flex direction */
+  flex-direction: row;
+  flex: 1;
+}
+
+/* The symbols in the sidebar links for both this solution and the TOP 
+   solution are not displayed as in the example png. */
+.sidebar {
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  padding: 16px;
+}
+
+.content {
+  display: flex;
+  /* TOP solution uses a ,card margin of 16px instead of a gap. The 
+     card margins of 16px + the .content padding of 32px are more 
+     appealing than the TOP-required padding of only 32px by itself. 
+     I wanted to do .content padding of 50px with my gap. */
+  gap: 30px;
+  flex-wrap: wrap;
+  /* TOP solution doesn't explicitly align-content. 
+     Be aware of default values. */
+  align-content: flex-start;
+  padding: 32px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
