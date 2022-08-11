@@ -25,3 +25,71 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+
+/* Solution. */
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #555555;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* TOP solution aligns .content center.*/
+  align-items: center;
+  /* TOP Solution uses flex: 1 for .content. */
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 8px 16px;
+}
+
+/* Left and right side padding of footer and header overflow. Footer 
+   bottom padding shows as overflow when overflow is set to visible. 
+   But with overflow set to hidden, footer bottom padding is visible. 
+   This solution adds padding to .left-links and .right-links to 
+   compensate for the overflow side padding in the footer and header.
+   
+   **These overflow problems are a result of this solution using 
+   align-items and justify-content for body which, in turn, resulted 
+   in setting 100% width for the footer and header.**
+   
+   Conclusion: try to avoid aligning body-width items center and 
+   possibly choose flex-grow for middle items over justify-content 
+   space-between. */
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  width: 100%;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.left-links {
+  padding-left: 16px;
+}
+
+.right-links {
+  padding-right: 16px;
+}
