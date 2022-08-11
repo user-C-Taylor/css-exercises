@@ -79,7 +79,10 @@ body {
   gap: 30px;
   flex-wrap: wrap;
   /* TOP solution doesn't explicitly align-content. 
-     Be aware of default values. */
+     Be aware of default values. 
+     The default value is "normal" packing. Apparently this doesn't 
+     articulate differently in this exercise when card dimensions are 
+     set to exercise requirements (on my screen).*/
   align-content: flex-start;
   padding: 32px;
 }
