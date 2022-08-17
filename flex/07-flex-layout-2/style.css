@@ -1,4 +1,10 @@
 body {
+/* Installing Noto Color Emoji and restarting Xubuntu allowed the 
+   display of color emoji in Chrome. Since Google's new Noto Emoji font
+   is monochrome, importing a font for visitors to see color emojis 
+   seems to be an issue. Fixing this requires hosting the font by 
+   individual websites and adding some CSS.
+   Noto Color Emoji: https://github.com/googlefonts/noto-emoji */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
